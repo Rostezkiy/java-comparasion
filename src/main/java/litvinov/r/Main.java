@@ -57,12 +57,8 @@ public class Main {
         List<String> stringsOne = stringArray.get(0);
         List<String> stringsTwo = stringArray.get(1);
         Map<String, String> result = new HashMap<>();
-        System.out.println("stringsOne = " + stringsOne);
-        System.out.println("stringsTwo = " + stringsTwo);
         for (String arrayEntityOne : stringsOne) {
-            System.out.println("EntityOne = " + arrayEntityOne);
             for (String arrayEntityTwo : stringsTwo) {
-                System.out.println("comparing = " + arrayEntityTwo);
                 if (service.score(arrayEntityOne, arrayEntityTwo) > 0.80) {
                     result.put(arrayEntityOne, arrayEntityTwo);
 //                        stringsOne.remove(arrayEntityOne);
