@@ -59,10 +59,8 @@ public class Main {
         Map<String, String> result = new HashMap<>();
         for (String arrayEntityOne : stringsOne) {
             for (String arrayEntityTwo : stringsTwo) {
-                if (service.score(arrayEntityOne, arrayEntityTwo) > 0.80) {
+                if (service.score(arrayEntityOne, arrayEntityTwo) > 0.80 | service.score(arrayEntityTwo, arrayEntityOne) > 0.80 ) {
                     result.put(arrayEntityOne, arrayEntityTwo);
-//                        stringsOne.remove(arrayEntityOne);
-//                        stringsTwo.remove(arrayEntityTwo);
                 } else {
                     result.putIfAbsent(arrayEntityOne, "?");
                 }
